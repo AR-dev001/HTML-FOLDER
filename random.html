@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨Random Numbers✨</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>random number from 1-10 i think no wait 1-100 </h1>
+    <h2>also almost forgot current date</h2>
+    <h2>refresh for new number and idk if u have to refresh for new date</h3>
+    <h6>i just got 0 and 99 as the random num in a row :o</h4>
+    <br>
+    <p id="result"></p>
+    <script>
+        var number="";
+        for (i=1;i<11;i++) {
+            number += i + "<br>";
+        }
+        document.write("The random number is " +Math.floor(Math.random() * 100));
+        document.write("<br>")
+        document.write("<br>")
+        var date = new Date();
+        document.write("Todays date is the " + date.getDate() + "th (month is glitched so this is day of the current month)");
+    </script>
+</body>
+</html>
