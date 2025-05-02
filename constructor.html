@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            background-color: rgb(27, 25, 25);
+         }
+         h1{
+            font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+            font-variation-settings:
+    "wdth" 100;
+         }
+    </style>
+</head>
+<body>
+    <h1><b>Constructor and Class</b></h1>
+    <p id="student1"></p>
+    <p id="student2"></p>
+    <script>
+        class Student{
+            constructor(name,year){
+            this.name=name;
+            this.year=year;
+            }
+        age(){
+            let date = new Date();
+            return date.getFullYear() - this.year;
+        }
+        }
+        student1=new Student("Alex",2009);
+        document.getElementById("student1").innerHTML= ("My name is " + student1.name + " and my age is " + student1.age() + ".");
+        student2 = new Student("John", 2012);
+        document.getElementById("student2").innerHTML = ("My name is " + student2.name + " and my age is " + student2.age() + ".");
+
+    </script>
+</body>
+</html>
