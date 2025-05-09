@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            background-color: rgb(27, 25, 25);
+         }
+    </style>
+</head>
+<body>
+    <h1>Search And Replace</h1>
+    <p id="replacement"></p>
+    <p id="searche"></p>
+    <p id="add"></p>
+    <p id="addstring"></p>
+    <script>
+        var str = "Hello how are doing today?";
+        var x=70;
+        var y=90;
+        var convstr= str.search("doing");
+        var replstr= str.replace("how are","how are you");
+        document.getElementById("replacement").innerHTML=(replstr);
+        document.getElementById("searche").innerHTML=(convstr);
+        document.getElementById("add").innerHTML=(x+y)
+        document.getElementById("addstring").innerHTML = (String(x) + String(y))
+    </script>
+</body>
+</html>
