@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Async</h1>
+    <p id="result"></p>
+    <script>
+        async function e(x, y) {
+            let response = await new Promise(resolve => setTimeout(() => resolve(x + y), 1000));
+            display(response);
+        }
+
+        function display(some) {
+            document.getElementById("result").innerHTML = some;
+        }
+
+        e(4, 6);
+    </script>
+</body>
+
+</html>
