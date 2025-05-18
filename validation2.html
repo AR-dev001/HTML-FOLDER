@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>If the num in form isnt between 100 and 300 an error will appear</p>
+    <form name="MyForm">
+        <input type="number" min="100" max="300" required name="textbox">
+        <button type="submit" onsubmit="Validate()">Submit</button>
+        <p id="result"></p>
+    </form>
+    <script>
+        var x = document.forms["MyForm"]["textbox"];
+        function Validate(){
+            if (x.CheckValidity()){
+                document.getElementById("result").innerHTML=(x.ValidateMessage());
+            }
+            else{
+                document.getElementById("result").innerHTML=("alr");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Fill Out Name:</p>
+    <form name="MyForm" onsubmit="validateform()">
+    <input type="text" name="textbox">
+    <br>
+    <br>
+    <button type="submit">Submit Example Form</button>
+    </form>
+    <script>
+        function validateform() {
+            var x = document.forms["MyForm"]["textbox"].value;
+            if (x == "") {
+                alert("You must enter name before submitting!1!1!1!!");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
