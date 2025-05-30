@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: black;
+            color: white;
+        }
+    
+        button{
+            appearance: none;
+            border: 1px solid rgba(27, 31, 35, 0.15);
+            border-radius: 500px;
+            color: #24292E;
+            cursor: pointer;
+            display: inline-block;
+            font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            list-style: none;
+            padding: 6px 16px;
+            position: relative;
+            transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: middle;
+            white-space: nowrap;
+            word-wrap: break-word;
+        }
+        .button:-webkit-details-marker {
+            display: none;
+        }
+        .operator{
+            background-color: rgb(12, 238, 12);
+        }
+        .number{
+            background-color: rgb(0, 213, 255);
+        }
+        .Blank{
+            background-color: rgb(238, 44, 134);
+            border-color: none;
+        }
+        .keyboard{
+            background-color: rgb(238, 44, 134);
+            border-radius: 6px;
+            height: 220px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class="container">
+        <div class="calculator">
+            <div class="keyboard">
+                <button class="operator" id="Clear">C</button>
+                <button class="operator" id="Backspace">CE</button>
+                <button class="operator" id="Percentage">%</button>
+                <button class="operator" id="Division">&#247;</button>
+                <button class="number" id="Seven">7</button>
+                <button class="number" id="Eight">8</button>
+                <button class="number" id="Nine">9</button>
+                <button class="operator" id="Multiply">&times;</button>
+                <button class="number" id="Four">4</button>
+                <button class="number" id="Four">5</button>
+                <button class="number" id="Four">6</button>
+                <button class="operator" id="Addition">&plus;</button>
+                <button class="operator" id="Subtraction">&minus;</button>
+                <button class="number" id="One">1</button>
+                <button class="number" id="Two">2</button>
+                <button class="number" id="Three">3</button>
+                <button class="Blank" id="Blank"></button>
+                <button class="number" id="Zero">0</button>
+                <button class="operator" id="Equivelant">&equals;</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
