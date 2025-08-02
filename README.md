@@ -1,1 +1,1 @@
-just a place for me to put my coding projects, really
+I just put my progress for html css n java here but im moving onto android studio, so who knows maybe ill return here maybe i wont.I really liked this compared to other coding languages overall it wasnt very hard either.I guess this is it so goodbye for now-August 2 2025.
