@@ -1,1 +1,2 @@
-I just put my progress for html css n java here but im moving onto android studio, so who knows maybe ill return here maybe i wont.I really liked this compared to other coding languages overall it wasnt very hard either.I guess this is it so goodbye for now-August 2 2025.
+I just put my progress for html css n java here but im moving onto android studio, so who knows maybe ill return here maybe i wont. -August 2 2025.
+lmao like 12 days later i start Flask on python so i guess im back
