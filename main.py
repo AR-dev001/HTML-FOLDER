@@ -1,30 +1,38 @@
-from flask import Flask, render_template, request
-from datetime import datetime
+from flask import Flask, render_template,request
 app = Flask(__name__)
-@app.route("/")
-def home():
-    return render_template("index.html")  # This serves the HTML form.
-@app.route("/calculate", methods=["POST"])
-def calculate_age():
-    try:
-        # Fetch the birth year from the form
-        birth_year = int(request.form.get("birth_year"))
 
-        # Get the current year
-        current_year = datetime.now().year
+ALLOWED_EXTENSIONS= {'txt','pdf','png','jpg','jpeg','gif'}
 
-        # Validate the birth year
-        if birth_year > current_year or birth_year < 1900:
-            return render_template("index.html", error="Please enter a valid year (1900 - current year).")
+@app.route('/upload')
+def upload_file():
+    return ('index.html')
 
-        # Calculate age
-        age = current_year - birth_year
+def allowed_file(filename):
+    return '.' in filename and \
+            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-        # Pass the age to the template
-        return render_template("index.html", age=age)
+@app.route('/uploader', methods = ['GET','POST'])
+def uploader_file():
+	if request.method == 'POST':
+		if 'file' not in request.files:
+			# flash('No file part')
+			return render_template('index.html', msg='No file part')
+		file = request.files['file']   
+		# If the user does not select a file, the browser submits an
+		# empty file without a filename.
+		if file.filename == '':
+			# flash('No selected file')
+			return render_template('index.html', msg='No Selected file')
+		if file and allowed_file(file.filename): 
+			file.save(file.filename)
+			return render_template('index.html', msg='file uploaded successfully')
+		else:
+			return render_template('index.html', msg='This file is not supported, upload only png, pdf, txt, jpeg, jpg, gif extension files')
 
-    except ValueError:
-        # Handle non-integer input
-        return render_template("index.html", error="Please enter a valid number.")
-if __name__ == "__main__":
-    app.run(debug=True)
+	 
+		
+@app.route('/')
+def index():
+	return render_template('index.html')
+
+app.run(host='0.0.0.0', port=8080)
