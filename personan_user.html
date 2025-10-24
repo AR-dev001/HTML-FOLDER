@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        p,button{
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        p span{
+        color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p>Welcome to your personal page,
+        <span>{{user}}</span>.
+    </p>
+    <a href="/page"><button>Another Page!?</button></a>
+</body>
+</html>

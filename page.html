@@ -3,41 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            max-width: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-    
-        p,
-        form {
-            font-size: 20px;
-            margin-top: 20px;
-        }
-    
-        img {
-            width: 300px;
-            margin: 10px;
-        }
-    
-        p span {
-            color: blue;
-        }
-    </style>
+    <title>page.html</title>
 </head>
 <body>
-    <p>Wait this isn't a page! Error {{code}}!</p>
-    <br />
-    <img src="https://http.cat/{{code}}">
-    <br />
-    <form action="/user">
-        <input type="text" placeholder="username" name="username"></input>
-        <input type="submit" value="go to your shelter"></input>
+    <form action="/validate" method="post">
+        <h4>Your OTP has been sent to the email id provided.Please check email for confirmation.</h4>
+        Enter OTP(One-time Password):<input type="text" name="otp">
+        <input type="submit" value="submit">
     </form>
 </body>
 </html>
